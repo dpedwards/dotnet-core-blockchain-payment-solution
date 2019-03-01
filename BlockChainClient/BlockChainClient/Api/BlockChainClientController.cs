@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BlockChainClient.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -35,6 +36,19 @@ namespace BlockChainClient.Api
                 privateKey = wallet.PrivateKey,
                 publicKey = wallet.PublicKey
             };
+            return Ok(response);
+        }
+
+        /*
+         * NewTransaction() action Method to send any value (coin) over the blockchain
+         * 
+         * @return response
+         */
+        [HttpPost("generate/transaction")]
+        public IActionResult NewTransaction(TransactionClient transaction)
+        {
+            var sign = RSA.RSA.Sign(transaction.SenderPrivateKey, transaction.ToString());
+            var response = new { transaction = transaction, signature = sign };
             return Ok(response);
         }
 
