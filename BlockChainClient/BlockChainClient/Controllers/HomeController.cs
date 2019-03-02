@@ -5,6 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BlockChainClient.Models;
+using System.Net;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace BlockChainClient.Controllers
 {
@@ -55,6 +58,33 @@ namespace BlockChainClient.Controllers
             var url = new Uri(nodeUrl + "/chain");
             ViewBag.Blocks = GetChain(url);
             return View();
+        }
+
+        /*
+         * GetChain() Method to get blockchain by http web request
+         * 
+         * @param url 
+         * @return data.chain
+         * @return null;
+         */ 
+        private List<Block> GetChain(Uri url)
+        {
+            var request = (HttpWebRequest)WebRequest.Create(url);
+            var response = (HttpWebResponse)request.GetResponse();
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                var model = new
+                {
+                    chain = new List<Block>(),
+                    length = 0
+                };
+                string json = new StreamReader(response.GetResponseStream()).ReadToEnd();
+                var data = JsonConvert.DeserializeAnonymousType(json, model);
+
+                return data.chain;
+            }
+            return null;
         }
 
 
