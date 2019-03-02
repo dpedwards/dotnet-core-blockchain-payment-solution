@@ -8,12 +8,57 @@ using BlockChainClient.Models;
 
 namespace BlockChainClient.Controllers
 {
+
+    /**
+    * Used to define main interactions with MVC application 
+    * 
+    * @author Davain Pablo Edwards
+    * @license MIT 
+    * @version 1.0
+    */
     public class HomeController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
+
+        /*
+         * MakeTransactions() acion Method to show 'make action' view 
+         * 
+         * @return View()
+         */
+        public IActionResult MakeTransaction()
+        {
+            return View();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public IActionResult Privacy()
         {
