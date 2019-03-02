@@ -87,6 +87,15 @@ namespace BlockChainClient.Controllers
             return null;
         }
 
+        /*
+         * WalletTransaction() action Method to show transaction list in 'wallet transaction' view
+         * 
+         * @return View(new List<Transaction>())
+         */
+        public IActionResult WalletTransaction()
+        {
+            return View(new List<Transaction>());
+        }
 
 
 
