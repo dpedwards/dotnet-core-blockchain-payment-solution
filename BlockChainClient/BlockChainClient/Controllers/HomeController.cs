@@ -97,7 +97,23 @@ namespace BlockChainClient.Controllers
             return View(new List<Transaction>());
         }
 
+        /*
+         * WalletTransaction() http web action Method to post wallet transactions on blockchain
+         * 
+         * @param publicKey
+         * @return View(TransactionByAddress(publicKey, blocks))
+         */ 
+        [HttpPost]
+        public IActionResult WalletTransaction(string publicKey)
+        {
+            var url = new Uri("http://localhost:5000/" + "/chain"); // blockchain node URI
+            var blocks = GetChain(url);
+            ViewBag.publickey = publicKey;
 
+            return View(TransactionByAddress(publicKey, blocks));
+        }
+
+        
 
 
 
