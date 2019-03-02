@@ -43,6 +43,21 @@ namespace BlockChainClient.Controllers
             return View();
         }
 
+        /*
+         * ViewTransaction() http web action method to post transactions on blockchain
+         * 
+         * @param nodeUrl
+         * @return View()
+         */ 
+        [HttpPost]
+        public IActionResult ViewTransaction(string nodeUrl)
+        {
+            var url = new Uri(nodeUrl + "/chain");
+            ViewBag.Blocks = GetChain(url);
+            return View();
+        }
+
+
 
 
 
