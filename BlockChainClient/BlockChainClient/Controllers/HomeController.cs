@@ -113,7 +113,23 @@ namespace BlockChainClient.Controllers
             return View(TransactionByAddress(publicKey, blocks));
         }
 
-        
+        /*
+         * TransactionByAddress() Method to check all transactions by address
+         * 
+         * @param ownerAddress
+         * @param chain
+         * @return transactions
+         */
+        private List<Transaction> TransactionByAddress(string ownerAddress, List<Block> chain)
+        {
+            List<Transaction> transactions = new List<Transaction>();
+            foreach (var block in chain.OrderByDescending(x => x.Index))
+            {
+                var ownerTransactions = block.Transactions.Where(x => x.Sender == ownerAddress || x.Recipient == ownerAddress).ToList();
+                transactions.AddRange(ownerTransactions);
+            }
+            return transactions;
+        }
 
 
 
