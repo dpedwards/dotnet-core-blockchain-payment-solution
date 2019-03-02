@@ -24,7 +24,7 @@ namespace BlockChainClient.Controllers
         }
 
         /*
-         * MakeTransactions() acion Method to show 'make action' view 
+         * MakeTransactions() action Method to show 'make action' view 
          * 
          * @return View()
          */
@@ -33,7 +33,15 @@ namespace BlockChainClient.Controllers
             return View();
         }
 
-
+        /*
+         * ViewTransaction() action Method to show 'transaction' view
+         * 
+         * @return View()
+         */ 
+        public IActionResult ViewTransaction()
+        {
+            return View();
+        }
 
 
 
