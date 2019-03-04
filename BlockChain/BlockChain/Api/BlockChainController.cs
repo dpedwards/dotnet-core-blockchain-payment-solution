@@ -41,7 +41,7 @@ namespace BlockChain.Api
         * 
         * @return response
         */ 
-        [HttpGet("transaction/get")]
+        [HttpGet("transactions/get")]
         public IActionResult GetTransactions()
         {
             var response = new { transactions = blockchain.GetTransactions() };
@@ -118,7 +118,7 @@ namespace BlockChain.Api
          * 
          * @return nodes = blockchain.GetNodes() 
          */ 
-         [HttpGet("nodes")]
+         [HttpGet("nodes/get")]
          public IActionResult GetNodes()
          {
             return Ok(new { nodes = blockchain.GetNodes() });

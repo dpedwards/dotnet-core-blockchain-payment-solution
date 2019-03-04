@@ -130,31 +130,7 @@ namespace BlockChainClient.Controllers
             }
             return transactions;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        public IActionResult Privacy()
+public IActionResult Privacy()
         {
             return View();
         }
