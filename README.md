@@ -7,8 +7,8 @@
 A blockchain is a growing list of records, called blocks. The blocks are linked using cryptography and each block contains a cryptographic hash of the previous block, transaction data, and a timestamp. 
 
 There are two solutions:
-- BlockChain 
-- BlockChain Client
+- BlockChain with port :43211
+- BlockChain Client with port :5000 
 
 :sparkles: See what`s new in the [CHANGELOG](CHANGELOG.md).
 
@@ -17,7 +17,7 @@ There are two solutions:
 [![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/dare2101)
 
 
-## Pictures 
+## Blockchain Client Pictures 
 
 Wallet Generator:
 ![](BlockChain/images/Blockchain%20Client_Wallet%20Generator.png)
@@ -34,6 +34,21 @@ View Transactions:
 
 Wallet Transactions:
 ![](BlockChain/images/Blockchain%20Client_Wallet%20Transactions.png) 
+
+
+## Blockchain Pictures 
+
+Mine:
+![](BlockChain/images/Blockchain%20Frontend_Mine.png)
+
+![](BlockChain/images/Blockchain%20Frontend_Mine2.png)
+
+Add Node:
+![](BlockChain/images/Blockchain%20Frontend_Configure.png)
+
+Blockchain Overview:
+![](BlockChain/images/Blockchain%20Frontend_CoinBase.png
+
 
 
 ## Notable features
