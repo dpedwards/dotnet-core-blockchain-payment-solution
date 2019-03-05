@@ -7,8 +7,11 @@
 A blockchain is a growing list of records, called blocks. The blocks are linked using cryptography and each block contains a cryptographic hash of the previous block, transaction data, and a timestamp. 
 
 There are two solutions:
-- BlockChain with port :43211
-- BlockChain Client with port :5000 
+- Blockchain is listening on port :43211
+  - Fixed blockchain public key for easy testing: 18jp31DcT3n5vsYHGVhhQa2qsvEve4EUoQ
+  - Fixed blockchain private key for easy testing: L3aq7WPiSois3N7GxTr6ZSXMNdfbAZWNebiYvKK5hAUBCijk95rL
+
+- Blockchain Client is listening on port :5000 
 
 :sparkles: See what`s new in the [CHANGELOG](CHANGELOG.md).
 
