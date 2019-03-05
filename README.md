@@ -50,7 +50,7 @@ Add Node:
 ![](BlockChain/images/Blockchain%20Frontend_Configure.png)
 
 Blockchain Overview:
-![](BlockChain/images/Blockchain%20Frontend_CoinBase.png
+![](BlockChain/images/Blockchain%20Frontend_CoinBase.png)
 
 
 
