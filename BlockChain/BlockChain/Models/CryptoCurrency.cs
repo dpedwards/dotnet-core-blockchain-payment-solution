@@ -34,7 +34,7 @@ namespace BlockChain.Models
         
         public string NodeId { get; private set; }
         static int blockCount = 0;
-        static decimal reward = 1; // Set test reward value
+        static decimal reward = 50; // Set test reward value
 
         static string minerPrivateKey = "";
         static Wallet _minersWallet = RSA.RSA.KeyGenerate();
@@ -44,11 +44,12 @@ namespace BlockChain.Models
          */ 
         public CryptoCurrency()
         {
-            minerPrivateKey = _minersWallet.PrivateKey; //"L3aq7WPiSois3N7GxTr6ZSXMNdfbAZWNebiYvKK5hAUBCijk95rL";
-            NodeId = _minersWallet.PublicKey; //"18jp31DcT3n5vsYHGVhhQa2qsvEve4EUoQ";
+            // Set test public & private keys
+            minerPrivateKey = "L3aq7WPiSois3N7GxTr6ZSXMNdfbAZWNebiYvKK5hAUBCijk95rL"; //_minersWallet.PrivateKey; 
+            NodeId = "18jp31DcT3n5vsYHGVhhQa2qsvEve4EUoQ";//_minersWallet.PublicKey; 
 
             // Initial transaction
-            var transaction = new Transaction { Sender = "0", Recipient = NodeId, Amount = 49, Fees = 0, Signature = "" };
+            var transaction = new Transaction { Sender = "0", Recipient = NodeId, Amount = 50, Fees = 0, Signature = "" };
             _currentTransactions.Add(transaction);
 
             CreateNewBlock(proof: 100, previousHash: "1"); // Genesis block 
