@@ -18,7 +18,7 @@ A blockchain is a growing list of records, called blocks. The blocks are linked 
 - wallet transactions
 - etc.
 
-### Note
+## Note
 
 There are two solutions in this repository:
 - Blockchain is listening on port :43211
