@@ -1,12 +1,26 @@
-# [Blockchain & Blockchain Client](https://github.com/dpedwards/dotnet-core-blockchain-client)
+# [Blockchain & Blockchain Client](https://github.com/dpedwards/dotnet-core-blockchain-advanced)
 
-[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/dpedwards/dotnet-core-blockchain-client/master/LICENSE)
+[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/dpedwards/dotnet-core-blockchain-advanced/master/LICENSE)
 [![.NET Core](https://img.shields.io/badge/dotnet%20core-%3E%3D%202.2-blue.svg)](https://dotnet.microsoft.com/download)
 [![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-green.svg?logo=paypal)](https://www.paypal.me/dare2101)
 
 A blockchain is a growing list of records, called blocks. The blocks are linked using cryptography and each block contains a cryptographic hash of the previous block, transaction data, and a timestamp. 
 
-There are two solutions:
+## Notable features
+
+- cryptography 
+- process of creating blocks
+- process of chaining blocks 
+- network & mining
+- wallet generator
+- make transaction
+- view transactions
+- wallet transactions
+- etc.
+
+### Note
+
+There are two solutions in this repository:
 - Blockchain is listening on port :43211
   - Fixed blockchain public key for easy testing: 18jp31DcT3n5vsYHGVhhQa2qsvEve4EUoQ
   - Fixed blockchain private key for easy testing: L3aq7WPiSois3N7GxTr6ZSXMNdfbAZWNebiYvKK5hAUBCijk95rL
@@ -53,29 +67,15 @@ Blockchain Overview:
 ![](BlockChain/images/Blockchain%20Frontend_CoinBase.png)
 
 
-
-## Notable features
-
-- cryptography 
-- process of creating blocks
-- process of chaining blocks 
-- network & mining
-- wallet generator
-- make transaction
-- view transactions
-- wallet transactions
-- etc.
-
-
 ## Usage
 
-For detailed instructions on how to configure, customize, add/migrate content, and more read the [project`s documentation](https://github.com/dpedwards/dotnet-core-blockchain-client-clientdocs/quick-start-guide/).
+For detailed instructions on how to configure, customize, add/migrate content, and more read the [project`s documentation](https://github.com/dpedwards/dotnet-core-blockchain-advanced/docs/quick-start-guide/).
 
 ---
 
 ## Contributing
 
-Having trouble working with the project? Found a typo in the documentation? Interested in adding a feature or [fixing a bug](https://github.com/dpedwards/dotnet-core-blockchain-client/issues)? Then by all means [submit an issue](https://github.com/dpedwards/dotnet-core-blockchain-client/issues/new) or [pull request](https://help.github.com/articles/using-pull-requests/). If this is your first pull request, it may be helpful to read up on the [GitHub Flow](https://guides.github.com/introduction/flow/) first.
+Having trouble working with the project? Found a typo in the documentation? Interested in adding a feature or [fixing a bug](https://github.com/dpedwards/dotnet-core-blockchain-advanced/issues)? Then by all means [submit an issue](https://github.com/dpedwards/dotnet-core-blockchain-advanced/issues/new) or [pull request](https://help.github.com/articles/using-pull-requests/). If this is your first pull request, it may be helpful to read up on the [GitHub Flow](https://guides.github.com/introduction/flow/) first.
 
 ### Pull Requests
 
