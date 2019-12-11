@@ -1,10 +1,17 @@
-# [Blockchain & Blockchain Client](https://github.com/dpedwards/dotnet-core-blockchain-advanced)
+# [Blockchain Network & Blockchain Client + Xamarin Mobile Wallet App + QR Code based Payment Shop](https://github.com/dpedwards/dotnet-core-blockchain-advanced)
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/dpedwards/dotnet-core-blockchain-advanced/master/LICENSE)
 [![.NET Core](https://img.shields.io/badge/dotnet%20core-%3E%3D%202.2-blue.svg)](https://dotnet.microsoft.com/download)
 [![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-green.svg?logo=paypal)](https://www.paypal.me/dare2101)
 
 A blockchain is a growing list of records, called blocks. The blocks are linked using cryptography and each block contains a cryptographic hash of the previous block, transaction data, and a timestamp. 
+
+## Solutions
+
+- BlockChain
+- BlockchainPaymentShop
+- XamarinWallet
+- ProxyServer
 
 ## Notable features
 
@@ -16,6 +23,8 @@ A blockchain is a growing list of records, called blocks. The blocks are linked 
 - make transaction
 - view transactions
 - wallet transactions
+- QR Code generator
+- unlock videos with mobile wallet by scanning QR Code and paying cryptocurrency on blockchain
 - etc.
 
 ## Note
