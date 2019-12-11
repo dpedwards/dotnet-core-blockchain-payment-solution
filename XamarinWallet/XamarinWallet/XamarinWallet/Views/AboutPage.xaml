@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinWallet.Views.AboutPage"
+             xmlns:vm="clr-namespace:XamarinWallet.ViewModels"
+             Title="{Binding Title}">
+
+    <ContentPage.Content>
+        <StackLayout Spacing="10">
+            <Button Text="Scan QR Code"  
+                x:Name="btnScan"  
+                Clicked="btnScan_Clicked"/>
+            <Entry x:Name="txtBarcode"  
+               Placeholder="Text Do scan"/>
+            <Entry x:Name="txtAmount"  
+               Placeholder="price"/>
+            <Button Text="Pay"  
+                x:Name="btnPay"  
+                Clicked="btnPay_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>
