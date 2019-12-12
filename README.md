@@ -113,7 +113,7 @@ project documentation and demo pages can be found in the [`/docs`](docs) if subm
 - [Visual Studio](https://visualstudio.microsoft.com/de/vs/)
 
 
-### Other:
+### Packages:
 
 - [Microsoft.NETCore.App](https://dotnet.microsoft.com/)
 - [NBitcoin](https://github.com/MetacoSA/NBitcoin)
