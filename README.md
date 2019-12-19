@@ -110,14 +110,34 @@ project documentation and demo pages can be found in the [`/docs`](docs) if subm
 
 ### Requirements
 
-- [Visual Studio](https://visualstudio.microsoft.com/de/vs/)
+- [Visual Studio](https://visualstudio.microsoft.com/de/vs/) or [Visual Studio Code](https://code.visualstudio.com/)
+- [.NET Core](https://dotnet.microsoft.com/download)
 
 
 ### Packages:
 
+#### dotnet-core-blockchain-advanced
 - [Microsoft.NETCore.App](https://dotnet.microsoft.com/)
 - [NBitcoin](https://github.com/MetacoSA/NBitcoin)
 - [Newtonsoft.Json](https://www.newtonsoft.com/json)
+
+#### xamarin-mobile-wallet 
+- [NBitcoin](https://github.com/MetacoSA/NBitcoin)
+- [Newtonsoft.Json](https://www.newtonsoft.com/json)
+- [Xamarin.Forms](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/) 
+- [ZXing.Net.Mobile.Forms](https://github.com/Redth/ZXing.Net.Mobile)
+
+#### asp-dotnet-core-videounlocker
+- [Microsoft.AspNetCore.App](https://dotnet.microsoft.com/apps/aspnet)
+- [Microsoft.AspNetCore.Razor.Design](https://dotnet.microsoft.com/apps/aspnet)
+- [Microsoft.AspNetCore.SignalR](https://dotnet.microsoft.com/apps/aspnet)
+- [Microsoft.NETCore.App](https://dotnet.microsoft.com/)
+
+### dotnet-proxy-server
+- [.NET](https://dotnet.microsoft.com/download)
+
+
+
 
 
 ---
