@@ -6,9 +6,10 @@
 
 A blockchain is a growing list of records, called blocks. The blocks are linked using cryptography and each block contains a cryptographic hash of the previous block, transaction data, and a timestamp. 
 
-## Solutions
+## Projects
 
-- BlockChain
+- BlockChain 
+- BlockChain Client
 - BlockchainPaymentShop
 - XamarinWallet
 - ProxyServer
@@ -25,18 +26,47 @@ A blockchain is a growing list of records, called blocks. The blocks are linked 
 - wallet transactions
 - QR Code generator
 - unlock videos with mobile wallet by scanning QR Code and paying cryptocurrency on blockchain
+- proxy server
 - etc.
 
-## Note
+## Notes to test the blockchain based payment system
 
-There are two solutions in this repository:
-- Blockchain is listening on port :43211
-  - Fixed blockchain public key for easy testing: 18jp31DcT3n5vsYHGVhhQa2qsvEve4EUoQ
-  - Fixed blockchain private key for easy testing: L3aq7WPiSois3N7GxTr6ZSXMNdfbAZWNebiYvKK5hAUBCijk95rL
+There are 5 projects in this repository:
 
-- Blockchain Client is listening on port :5000 
+### Blockchain
+1. Start a new instance of the BlockChain project in Visual Studio 2017+ from the BlockChainAdvanced Solution.
+- Blockchain is listening on localhost port `63385`
+You can edit the public and private key in CryptoCurrency.cs class:
+- Fixed blockchain public key for easy testing: `18jp31DcT3n5vsYHGVhhQa2qsvEve4EUoQ`
+- Fixed blockchain private key for easy testing: `L3aq7WPiSois3N7GxTr6ZSXMNdfbAZWNebiYvKK5hAUBCijk95rL`
 
-:sparkles: See what`s new in the [CHANGELOG](CHANGELOG.md).
+### Blockchain Client
+2. Start a new instance of the BlockChain Client project in Visual Studio 2017+ if you want to generate new public or private keys, make transactions, view transactions by the blockchain listening on localhost port `63385` or show wallet transactions by adding a new public key. 
+- Blockchain Client is listening on localhost port `3582`. 
+
+### Proxy Server
+3. Start a new instance of the Proxy Server in Visual Studio and select the IP Address on your running machine you execute these projects. You can check the correct IP Address by cmd command ipconfig -all in Windows for example. The External Port must run on port `5000` and the Internal Port on port 1587.
+- Proxy Server
+
+3.1 Next access the URL in your browser on the IP Address of your running machine you execute these projecs and add the port 5000. This URL will access by the running instances. For example: http://192.168.2.101:5000
+
+### BlockchainPaymentShop
+4. Edit the applicationhost.config file in dotnet-core-blockchain-advanced\BlockChainPayment\.vs\config\ path and edit the following bindings by your own IP Address set by the Proxy Server in section 3:
+   ```yaml
+   <binding protocol="http" bindingInformation="*:1587:localhost" />
+   <binding protocol="http" bindingInformation="*:1587:xxx.xxx.xxx.xxx" />
+   ```
+
+### XamarinWallet Android mobile app
+5. Last activate the Android Developer features on your Android smartphone hardware and connect physically with a USB cable to your machine you running these projects.
+5.1 Enable USB debugging option on your Android device.
+5.2 Debug the XamarinWallet app with a USB cable connection to your workstation.
+5.3 An instance of the mobile app should runon your Android device.
+5.3.1 Next save the Public and the Private Keys by enter the SAVE button in the UI. A notification that the keys are updated should be shown. 
+5.3.2 Tab to the QR SCAN UI and enter the SCAN QR CODE button.
+5.3.3 Now scan a QR Code from the BlockChainPaymentShop URL http://xxx.xxx.xxx:5000 with your Android smartphone hardware and enter the PAY button to pay over the blockchain payment system to unlock a video.
+- XamarinWallet
+
 
 **If you enjoy this project, please consider [supporting me](https://www.paypal.me/dare2101) for developing and maintaining it.**
 
@@ -75,11 +105,6 @@ Add Node:
 Blockchain Overview:
 ![](BlockChain/images/Blockchain%20Frontend_CoinBase.png)
 
-
-## Usage
-
-For detailed instructions on how to configure, customize, add/migrate content, and more read the [project`s documentation](https://github.com/dpedwards/dotnet-core-blockchain-advanced/docs/quick-start-guide/).
-
 ---
 
 ## Contributing
@@ -116,24 +141,29 @@ project documentation and demo pages can be found in the [`/docs`](docs) if subm
 
 ### Packages:
 
-#### dotnet-core-blockchain-advanced
+#### BlockChain Project
 - [Microsoft.NETCore.App](https://dotnet.microsoft.com/)
 - [NBitcoin](https://github.com/MetacoSA/NBitcoin)
 - [Newtonsoft.Json](https://www.newtonsoft.com/json)
 
-#### xamarin-mobile-wallet 
+#### BlockChainClient Project
+- [Microsoft.NETCore.App](https://dotnet.microsoft.com/)
+- [Microsoft.AspNetCore.Razor.Design](https://dotnet.microsoft.com/apps/aspnet)
+- [Microsoft.NETCore.App](https://dotnet.microsoft.com/)
+
+#### Xamarin-Wallet Project
 - [NBitcoin](https://github.com/MetacoSA/NBitcoin)
 - [Newtonsoft.Json](https://www.newtonsoft.com/json)
 - [Xamarin.Forms](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/) 
 - [ZXing.Net.Mobile.Forms](https://github.com/Redth/ZXing.Net.Mobile)
 
-#### asp-dotnet-core-videounlocker
+#### BlockChainPaymentShop Project
 - [Microsoft.AspNetCore.App](https://dotnet.microsoft.com/apps/aspnet)
 - [Microsoft.AspNetCore.Razor.Design](https://dotnet.microsoft.com/apps/aspnet)
 - [Microsoft.AspNetCore.SignalR](https://dotnet.microsoft.com/apps/aspnet)
 - [Microsoft.NETCore.App](https://dotnet.microsoft.com/)
 
-### dotnet-proxy-server
+#### ProxyServer Project 
 - [.NET](https://dotnet.microsoft.com/download)
 
 
