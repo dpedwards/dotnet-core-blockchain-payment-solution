@@ -55,7 +55,7 @@ namespace BlockChainClient.Controllers
         [HttpPost]
         public IActionResult ViewTransaction(string node_url)
         {
-            node_url = "http://localhost:43211";
+            node_url = "http://localhost:63385";
 
             var url = new Uri(node_url + "/chain");
             ViewBag.Blocks = GetChain(url);
@@ -81,7 +81,7 @@ namespace BlockChainClient.Controllers
         [HttpPost]
         public IActionResult WalletTransaction(string publicKey)
         {
-            var url = new Uri("http://localhost:43211" + "/chain"); // blockchain node URI
+            var url = new Uri("http://localhost:63385" + "/chain"); // blockchain node URI
             var blocks = GetChain(url);
             ViewBag.publicKey = publicKey;
 

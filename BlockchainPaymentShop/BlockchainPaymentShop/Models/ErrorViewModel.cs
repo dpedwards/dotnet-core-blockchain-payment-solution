@@ -1,6 +1,6 @@
 using System;
 
-namespace BlockchainPaymentShop.Models
+namespace BlockChainPaymentShop.Models
 {
     public class ErrorViewModel
     {

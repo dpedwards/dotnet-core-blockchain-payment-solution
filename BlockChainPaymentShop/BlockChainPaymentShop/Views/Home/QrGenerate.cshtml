@@ -1,0 +1,65 @@
+﻿<div class="container alert alert-secondary">
+    @using (Html.BeginForm())
+    {
+        <div class="row">
+            <label class="col-sm-2">Receiver Address:</label>
+            <div class="col-sm-10">
+                <input type="text" id="receiver" class="form-control" placeholder="" />
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-sm-2">Amount:</label>
+            <div class="col-sm-10">
+                <input type="text" id="amount" class="form-control" placeholder="" />
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <input type="button" id="generateQR" class="btn btn-primary btn-lg" value="Generate QR Code">
+            </div>
+        </div>
+    }
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10 text-center">
+            <div id="qrcode">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/qrcode.js"></script>
+
+    <script>
+        $('#generateQR').on('click',function () {
+            //https://codepen.io/html5andblog/pen/rLQdNV
+            var $this = $('#qrcode');
+            var receiver = $('#receiver').val();
+            var amount = $('#amount').val();
+            var value = 'http://192.168.2.101:43211/api/Pay?recipient=' + receiver + '&fees=1&amount=' + amount;
+            //alert(value);
+            // Clear Previous QR Code
+            $this.html('');
+
+            // Set Size to Match User Input
+            var qrSize = 250;
+
+            $this.css({
+                'width': qrSize,
+                'height': qrSize
+            })
+
+            // Generate and Output QR Code
+            $this.qrcode({ width: qrSize, height: qrSize, text: value });
+
+        });
+    </script>
+}

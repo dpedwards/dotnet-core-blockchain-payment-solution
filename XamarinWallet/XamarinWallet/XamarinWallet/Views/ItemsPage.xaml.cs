@@ -29,8 +29,8 @@ namespace XamarinWallet.Views
             InitializeComponent();
             Transaction = new Transaction
             {
-                PrivateKey = "", //L3aq7WPiSois3N7GxTr6ZSXMNdfbAZWNebiYvKK5hAUBCijk95rL
-                Sender = "", //18jp31DcT3n5vsYHGVhhQa2qsvEve4EUoQ
+                PrivateKey = "L3aq7WPiSois3N7GxTr6ZSXMNdfbAZWNebiYvKK5hAUBCijk95rL",
+                Sender = "18jp31DcT3n5vsYHGVhhQa2qsvEve4EUoQ"
             };
 
             BindingContext = this;

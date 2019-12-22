@@ -1,8 +1,109 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@page
+
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+@{
+    string ip = HttpContextAccessor.HttpContext.Connection.RemoteIpAddress.ToString();
+    var users = VideoOwned.users;
+    var lstVideoes = ViewBag.Videoes as List<Video>;
+    var DomainName = HttpContextAccessor.HttpContext.Request.Scheme + "://" + HttpContextAccessor.HttpContext.Request.Host;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    .qrcode {
+        width: 128px;
+        height: 128px;
+        margin: 0 auto;
+        text-align: center;
+    }
+</style>
+<h2>@ip</h2>
+<div class="container">
+    @foreach (var item in lstVideoes)
+    {
+        <br />
+        <div class="row">
+            <div class="col-lg-10" style="color:blue"><h2>@item.Title</h2></div>
+        </div>
+        <div class="row">
+            @{
+                string img = "/images/" + item.Id + ".PNG";
+            }
+            @if (users.FirstOrDefault(x => x.Id == item.Id && x.Ip == ip) == null)
+            {
+                <div class="col-xs-8" style="height:500px;background-image:url('@img');background-repeat: no-repeat;">
+                    <div id="div_@item.Id" class="text-center" style="background-color:white">
+                        <div class="qrcode">
+                            http://192.168.2.101:5000/api/Pay?pid=@item.Id&ip=@ip&recipient=1EDvdbQVNEtEvSsUpwunpjbGoZa3SCnkUu&fees=1&amount=@item.Price
+                        </div>
+
+
+
+                        <h2 class="" style="background-color:white;">Pay @item.Price Coins to UnLock this Video</h2>
+                    </div>
+
+                    <iframe id="iframe_@item.Id" width="870" height="490" class="hide"
+                            src=""></iframe>
+                </div>
+            }
+            else
+            {
+                <div class="col-xs-8">
+                    <iframe id="iframe_@item.Id" width="870" height="490" class=""
+                            src="http://www.youtube.com/embed/@item.URL?rel=0&autoplay=1"></iframe>
+                </div>
+            }
+        </div>
+
+        <div class="col-xs-4"></div>
+
+    }
 </div>
+
+<script src="~/lib/signalr/signalr.js"></script>
+
+<script>
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/chatHub")
+        .build();
+
+    connection.on("@ip", (id, url) => {//ReceiveMessage==ip address
+        //var id = user;
+        //var url = message;
+        //alert(id + url);
+        var v = document.getElementById("div_" + id);
+        v.setAttribute("class", "hide");
+        v.parentElement.setAttribute("style", "");
+        var c = document.getElementById("iframe_" + id);
+        c.setAttribute("src", "http://www.youtube.com/embed/" + url +"?rel=0&autoplay=1");
+        c.setAttribute("class", "");
+    });
+    connection.start().catch(err => console.error(err.toString()));
+</script>
+
+@section Scripts{
+    <script src="~/js/qrcode.js"></script>
+
+    <script>
+        $('.qrcode').each(function () {
+            //https://codepen.io/html5andblog/pen/rLQdNV
+            var $this = $(this);
+            var value = $this.text().trim();
+            //alert(value);
+            // Clear Previous QR Code
+            $this.html('');
+
+            // Set Size to Match User Input
+            var qrSize = 200;
+
+            $this.css({
+                'width': qrSize,
+                'height': qrSize
+            })
+
+            // Generate and Output QR Code
+            $this.qrcode({ width: qrSize, height: qrSize, text: value });
+
+        });
+    </script>
+}

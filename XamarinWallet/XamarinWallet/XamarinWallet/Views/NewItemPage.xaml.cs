@@ -73,7 +73,7 @@ namespace XamarinWallet.Views
 
             try
             {
-                var url = new Uri("http://localhost:5000" + "/api/chain"); // connection to dotnet-core-blockchain API
+                var url = new Uri("http://192.168.2.101:5000" + "/api/chain"); // connection to dotnet-core-blockchain API
                 var response = client.GetAsync(url).Result;
 
                 var content = response.Content.ReadAsStringAsync().Result;

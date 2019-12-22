@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -39,6 +36,8 @@ namespace BlockChain
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
                 builder.AllowAnyOrigin()
+                       .WithOrigins("http://localhost:3581/",
+                                    "http://localhost:3582/")
                        .AllowAnyMethod()
                        .AllowAnyHeader();
             }));
