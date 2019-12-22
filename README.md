@@ -100,12 +100,13 @@ Wallet Transactions:
    <binding protocol="http" bindingInformation="*:1587:xxx.xxx.xxx.xxx" />
    ```
 ```diff
-!Edit the URI in Index.cshtml and QrGenerate.cshtml file in the BlockChainPaymentShop with the IP Address from your workmachine:
+!Edit the URI in Index.cshtml and QrGenerate.cshtml file in the BlockChainPaymentShop with the IP Address from your workmachine but don't change the ports 5000 or 43211!
 ```
 Index.cshtml file:
 ![](BlockChainPaymentShop/images/Index.cshtml.png) 
 
 QrGenerator.cshtml
+
 ![](BlockChainPaymentShop/images/QrGenerator.cshtml.png) 
    
 Scan QR Code by XamarinWallet Android app to unlock a video:
@@ -136,6 +137,7 @@ Activate cam and scan QR Code:
 
 Unlock BlockChainPaymentShop videos:
 ![](XamarinWallet/images/Xamarin_Mobile_WalletAndroid_Unlock_Video_1.png) 
+
 ![](XamarinWallet/images/Xamarin_Mobile_WalletAndroid_Unlock_Video_2.png) 
 
 
