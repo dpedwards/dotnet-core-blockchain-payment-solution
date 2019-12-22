@@ -37,13 +37,14 @@ There are 5 projects in this repository:
 1. Start a new instance of the BlockChain project in Visual Studio 2017+ from the BlockChainAdvanced Solution.
 - Blockchain is listening on localhost port `63385`
 
-![](BlockChain/images/BlockChain_PublicPrivateKeys.png)
 You can edit the public and private key in CryptoCurrency.cs class:
 - Fixed blockchain public key for easy testing: `18jp31DcT3n5vsYHGVhhQa2qsvEve4EUoQ`
 - Fixed blockchain private key for easy testing: `L3aq7WPiSois3N7GxTr6ZSXMNdfbAZWNebiYvKK5hAUBCijk95rL`
+![](BlockChain/images/BlockChain_PublicPrivateKeys.png)
 
+Edit client access in Startup.cs class by changing the policy:
 ![](BlockChain/images/BlockChain_Policy.png)
-Edit client access in Startup.cs class by changing the policy.
+
 
 #### Blockchain Pictures 
 
@@ -87,7 +88,7 @@ Wallet Transactions:
 
 #### Proxy Server Picture
 
-![](ProxyServer/images/.NET ProxyServer.png)
+![](ProxyServer/images/.NET%20ProxyServer.png)
 
 
 3.1 Next access the URL in your browser on the IP Address of your running machine you execute these projecs and add the port 5000. This URL will access by the running instances. For example: http://192.168.2.101:5000
@@ -101,6 +102,7 @@ Wallet Transactions:
 Scan QR Code by XamarinWallet Android app to unlock a video:
 ![](BlockChainPaymentShop/images/BlockChainPaymentShop3.png) 
 
+
 Generate QR Code:
 ![](BlockChainPaymentShop/images/BlockChainPaymentShop2.png) 
 
@@ -113,6 +115,7 @@ Generate QR Code:
 5.3.1 Next save the Public and the Private Keys by enter the SAVE button in the UI. A notification that the keys are updated should be shown. 
 5.3.2 Tab to the QR SCAN UI and enter the SCAN QR CODE button.
 5.3.3 Now scan a QR Code from the BlockChainPaymentShop URL http://xxx.xxx.xxx:5000 with your Android smartphone hardware and enter the PAY button to pay over the blockchain payment system to unlock a video.
+
 
 Update Public and Private Keys:
 ![](XamarinWallet/images/Xamarin_Mobile_WalletAndroid_KEYS.png) 
