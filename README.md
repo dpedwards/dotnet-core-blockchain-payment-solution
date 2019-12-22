@@ -87,17 +87,17 @@ Wallet Transactions:
 
 
 ## III. Proxy Server
-3. Start a new instance of the Proxy Server in Visual Studio and select the IP Address on your running machine you execute these projects. You can check the correct IP Address by cmd command ipconfig -all in Windows for example. The External Port must run on port `5000` and the Internal Port on port 1587.
+3. Start a new instance of the Proxy Server in Visual Studio and select the IP Address on your running machine you execute these projects. You can check the correct IP Address by cmd `ipconfig -all` in Windows for example. The External Port must run on port `5000` and the Internal Port on port `1587`.
 
 ### Proxy Server Picture
 
 ![](ProxyServer/images/.NET%20ProxyServer.png)
 
 
-3.1 Next access the URL in your browser on the IP Address of your running machine you execute these projecs and add the port 5000. This URL will access by the running instances. For example: http://xxx.xxx.xxx.xxx:5000
+3.1 Next access the URL in your browser on the IP Address of your running machine you execute these projects and add the port `5000`. This URL will access by the running instances. For example: http://xxx.xxx.xxx.xxx:5000
 
 ## IV. BlockChainPaymentShop
-4. Edit the applicationhost.config file in dotnet-core-blockchain-advanced\BlockChainPayment\.vs\config\ path and edit the following bindings by your own IP Address set by the Proxy Server in section 3:
+4. Edit the `applicationhost.config` file in `dotnet-core-blockchain-advanced\BlockChainPayment\.vs\config\` path and edit the following bindings by your own IP Address set by the Proxy Server in section 3:
    ```yaml
    <binding protocol="http" bindingInformation="*:1587:localhost" />
    <binding protocol="http" bindingInformation="*:1587:xxx.xxx.xxx.xxx" />
