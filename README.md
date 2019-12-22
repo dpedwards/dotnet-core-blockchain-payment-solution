@@ -29,11 +29,11 @@ A blockchain is a growing list of records, called blocks. The blocks are linked 
 - proxy server
 - etc.
 
-## Notes to test the blockchain based payment system
+# Notes to test the blockchain based payment system
 
 There are 5 projects in this repository:
 
-### I. Blockchain
+## I. Blockchain
 1. Start a new instance of the BlockChain project in Visual Studio 2017+ from the BlockChainAdvanced Solution.
 - Blockchain is listening on localhost port `63385`
 
@@ -46,7 +46,7 @@ Edit client access in Startup.cs class by changing the policy:
 ![](BlockChain/images/BlockChain_Policy.png)
 
 
-#### Blockchain Pictures 
+### Blockchain Pictures 
 
 Mine:
 ![](BlockChain/images/Blockchain%20Frontend_Mine.png)
@@ -60,11 +60,11 @@ Blockchain Overview:
 ![](BlockChain/images/Blockchain%20Frontend_CoinBase.png)
 
 
-### II. Blockchain Client
+## II. Blockchain Client
 2. Start a new instance of the BlockChain Client project in Visual Studio 2017+ if you want to generate new public or private keys, make transactions, view transactions by the blockchain listening on localhost port `63385` or show wallet transactions by adding a new public key. 
 - Blockchain Client is listening on localhost port `3582`. 
 
-#### Blockchain Client Pictures 
+### Blockchain Client Pictures 
 
 Wallet Generator:
 ![](BlockChain/images/Blockchain%20Client_Wallet%20Generator.png)
@@ -83,22 +83,31 @@ Wallet Transactions:
 ![](BlockChain/images/Blockchain%20Client_Wallet%20Transactions.png) 
 
 
-### III. Proxy Server
+## III. Proxy Server
 3. Start a new instance of the Proxy Server in Visual Studio and select the IP Address on your running machine you execute these projects. You can check the correct IP Address by cmd command ipconfig -all in Windows for example. The External Port must run on port `5000` and the Internal Port on port 1587.
 
-#### Proxy Server Picture
+### Proxy Server Picture
 
 ![](ProxyServer/images/.NET%20ProxyServer.png)
 
 
-3.1 Next access the URL in your browser on the IP Address of your running machine you execute these projecs and add the port 5000. This URL will access by the running instances. For example: http://192.168.2.101:5000
+3.1 Next access the URL in your browser on the IP Address of your running machine you execute these projecs and add the port 5000. This URL will access by the running instances. For example: http://xxx.xxx.xxx.xxx:5000
 
-### IV. BlockchainPaymentShop
+## IV. BlockChainPaymentShop
 4. Edit the applicationhost.config file in dotnet-core-blockchain-advanced\BlockChainPayment\.vs\config\ path and edit the following bindings by your own IP Address set by the Proxy Server in section 3:
    ```yaml
    <binding protocol="http" bindingInformation="*:1587:localhost" />
    <binding protocol="http" bindingInformation="*:1587:xxx.xxx.xxx.xxx" />
    ```
+```diff
+!Edit the URI in Index.cshtml and QrGenerate.cshtml file in the BlockChainPaymentShop with the IP Address from your workmachine:
+```
+Index.cshtml file:
+![](BlockChainPaymentShop/images/Index.cshtml.png) 
+
+QrGenerator.cshtml
+![](BlockChainPaymentShop/images/QrGenerator.cshtml.png) 
+   
 Scan QR Code by XamarinWallet Android app to unlock a video:
 ![](BlockChainPaymentShop/images/BlockChainPaymentShop3.png) 
 
@@ -107,7 +116,7 @@ Generate QR Code:
 ![](BlockChainPaymentShop/images/BlockChainPaymentShop2.png) 
 
 
-### V. XamarinWallet Android mobile app
+## V. XamarinWallet Android mobile app
 5. Last activate the Android Developer features on your Android smartphone hardware and connect physically with a USB cable to your machine you running these projects.
 5.1 Enable USB debugging option on your Android device.
 5.2 Debug the XamarinWallet app in Visual Studio 2017+ with a USB cable connection to your workstation.
@@ -147,8 +156,6 @@ When submitting a pull request:
 1. Clone the repo.
 2. Create a branch off of `master` and give it a meaningful name (e.g. `my-awesome-new-feature`).
 3. Open a pull request on GitHub and describe the feature or fix.
-
-project documentation and demo pages can be found in the [`/docs`](docs) if submitting improvements, typo corrections, etc.
 
 ---
 
