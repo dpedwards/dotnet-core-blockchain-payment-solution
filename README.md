@@ -1,7 +1,7 @@
 # [Blockchain Network & Blockchain Client + Xamarin Mobile Wallet App + QR Code based Payment Shop](https://github.com/dpedwards/dotnet-core-blockchain-advanced)
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/dpedwards/dotnet-core-blockchain-advanced/master/LICENSE)
-[![.NET Core](https://img.shields.io/badge/dotnet%20core-%3E%3D%202.2-blue.svg)](https://dotnet.microsoft.com/download)
+[![.NET Core](https://img.shields.io/badge/dotnet%20core-2.2-blue.svg)](https://dotnet.microsoft.com/download)
 [![Xamarin](https://img.shields.io/badge/xamarin-forms-blue.svg)](https://docs.microsoft.com/de-de/xamarin/)
 [![.NET](https://img.shields.io/badge/dotnet%20-%204-green.svg)](https://www.microsoft.com/de-de/download/details.aspx?id=55170)
 [![Windows Forms](https://img.shields.io/badge/windows-forms-blue.svg)](https://docs.microsoft.com/en-ca/dotnet/framework/winforms/)
