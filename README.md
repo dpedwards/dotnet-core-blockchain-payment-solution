@@ -37,7 +37,7 @@ A blockchain is a growing list of records, called blocks. The blocks are linked 
 There are 5 projects in this repository:
 
 ## I. Blockchain
-1. Start a new instance of the BlockChain project in Visual Studio 2017+ from the BlockChainAdvanced Solution.
+1. Start a new instance of the BlockChain project in Visual Studio 2017+ from the BlockChain Payment Solution.
 - Blockchain is listening on localhost port `63385`
 
 You can edit the public and private key in CryptoCurrency.cs class:
