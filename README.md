@@ -1,6 +1,6 @@
-# [Blockchain Network & Blockchain Client + Xamarin Mobile Wallet App + QR Code based Payment Shop](https://github.com/dpedwards/dotnet-core-blockchain-advanced)
+# [Blockchain Network & Blockchain Client + Xamarin Mobile Wallet App + QR Code based Payment Shop](https://github.com/dpedwards/dotnet-core-blockchain-payment-solution)
 
-[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/dpedwards/dotnet-core-blockchain-advanced/master/LICENSE)
+[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/dpedwards/dotnet-core-blockchain-payment-solution/master/LICENSE)
 [![.NET Core](https://img.shields.io/badge/dotnet%20core-2.2-blue.svg)](https://dotnet.microsoft.com/download)
 [![Xamarin](https://img.shields.io/badge/xamarin-forms-blue.svg)](https://docs.microsoft.com/de-de/xamarin/)
 [![.NET](https://img.shields.io/badge/dotnet%20-%204-green.svg)](https://www.microsoft.com/de-de/download/details.aspx?id=55170)
@@ -147,6 +147,9 @@ Unlock BlockChainPaymentShop videos:
 **If you enjoy this project, please consider [supporting me](https://www.paypal.me/dare2101) for developing and maintaining it.**
 
 [![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/dare2101)
+- Support via ETH 0x331fa09bf9eb218b4c15de7e8bcdc5a83f34140f
+- Support via BTC 13KUoie3wnJtKVQ9bvmYuGX5Z2cdBmpstd
+- Support via XVG DNbzsWuRJ85nBRUYtY7muCVxSKQNKXMgk4
 
 ---
 
