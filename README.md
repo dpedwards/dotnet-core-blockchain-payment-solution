@@ -172,9 +172,6 @@ When submitting a pull request:
 ### Creator
 
 **Davain Pablo Edwards**
-
-- <https://soon.com>
-- <https://twitter.com/d_p_edwards>
 - <https://github.com/dpedwards>
 
 ### Requirements
