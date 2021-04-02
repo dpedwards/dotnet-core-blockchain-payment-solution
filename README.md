@@ -5,7 +5,6 @@
 [![Xamarin](https://img.shields.io/badge/xamarin-forms-blue.svg)](https://docs.microsoft.com/de-de/xamarin/)
 [![.NET](https://img.shields.io/badge/dotnet%20-%204-green.svg)](https://www.microsoft.com/de-de/download/details.aspx?id=55170)
 [![Windows Forms](https://img.shields.io/badge/windows-forms-blue.svg)](https://docs.microsoft.com/en-ca/dotnet/framework/winforms/)
-[![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-green.svg?logo=paypal)](https://www.paypal.me/dare2101)
 
 A blockchain is a growing list of records, called blocks. The blocks are linked using cryptography and each block contains a cryptographic hash of the previous block, transaction data, and a timestamp. 
 
@@ -142,28 +141,6 @@ Unlock BlockChainPaymentShop videos:
 ![](XamarinWallet/images/Xamarin_Mobile_WalletAndroid_Unlock_Video_1.png) 
 
 ![](XamarinWallet/images/Xamarin_Mobile_WalletAndroid_Unlock_Video_2.png) 
-
-
-**If you enjoy this project, please consider [supporting me](https://www.paypal.me/dare2101) for developing and maintaining it.**
-
-[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/dare2101)
-- Support via ETH 0x331fa09bf9eb218b4c15de7e8bcdc5a83f34140f
-- Support via BTC 13KUoie3wnJtKVQ9bvmYuGX5Z2cdBmpstd
-- Support via XVG DNbzsWuRJ85nBRUYtY7muCVxSKQNKXMgk4
-
----
-
-## Contributing
-
-Having trouble working with the project? Found a typo in the documentation? Interested in adding a feature or [fixing a bug](https://github.com/dpedwards/dotnet-core-blockchain-advanced/issues)? Then by all means [submit an issue](https://github.com/dpedwards/dotnet-core-blockchain-advanced/issues/new) or [pull request](https://help.github.com/articles/using-pull-requests/). If this is your first pull request, it may be helpful to read up on the [GitHub Flow](https://guides.github.com/introduction/flow/) first.
-
-### Pull Requests
-
-When submitting a pull request:
-
-1. Clone the repo.
-2. Create a branch off of `master` and give it a meaningful name (e.g. `my-awesome-new-feature`).
-3. Open a pull request on GitHub and describe the feature or fix.
 
 ---
 
